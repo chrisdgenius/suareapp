@@ -1,0 +1,117 @@
+POST http://localhost:9000/customers
+Content-Type: application/json
+
+ {  
+    "_id":"201",
+   "firstName":"joy ",
+   "lastNames":"Okonta1",
+    "emailAddress":"joy@gmail.com",
+    "phoneNumber":"08062359896",
+    "age":22,
+    "dob":"310/5/1893"
+ }
+
+
+
+###
+// TO GET ONE CUSTOMER BY ID
+
+GET http://localhost:9000/customers/33
+
+
+###
+
+//GET ALL CUSTOMERS
+GET http://localhost:9000/customers
+
+
+###
+
+// TO UPDATE CUSTOMER
+PATCH  http://localhost:9000/customers/33
+Content-Type: application/json
+
+{  
+    "firstName":"Makkinsen"
+   
+   }
+
+
+###
+
+//DELETE A CUSTOMER
+DELETE http://localhost:9000/customers/613381a4bdc7b618a831aef3
+
+
+
+###
+   //TO GET CUSTOMERS STATISTICS
+GET  http://localhost:9000/customers/stats
+
+
+
+###
+//to test the authentication API Register user
+POST http://localhost:9000/auth/register-user
+Content-Type: application/json
+
+{  
+   "_id":"0090",  
+    "title":"mr",
+    
+    "name":"chris4" ,
+    "otherNames":"ighohor",
+    "terms":true,
+    "email":"myy@yahoo.com",
+    "role":"admin",
+    "password":"administrator",
+    "confirmPassword":"administrator" ,
+    "physicalAddress":"nigeria",
+    "phoneNumber":"08062359896" ,
+    "dob":"25/12/2021" 
+ }
+
+
+
+###
+//to test the singin
+POST http://localhost:9000/auth/signin
+Content-Type: application/json
+
+ {  
+   "name":"chris",
+   "email":"chris@yahoo.com",
+    "password":"administrator"
+ }
+
+
+
+###
+//to get single user
+GET http://localhost:9000/auth/user-profile/2
+
+
+###
+//get all users
+GET http://localhost:9000/auth
+
+
+
+###
+
+PATCH  http://localhost:9000/auth/update-user/1
+Content-Type: application/json
+
+{  
+    "title":"Makkinsen"
+   
+   }
+
+
+
+###
+   //DELETE A CUSTOMER
+DELETE  http://localhost:9000/auth/delete-user/1
+
+
+
